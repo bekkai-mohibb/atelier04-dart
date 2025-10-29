@@ -19,11 +19,26 @@ class Livre {
   }
 }
 
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  void afficherInfosRoman() {
+    print("Titre: $titre, Auteur: $auteur, Genre: $genre, Pages: $pages");
+  }
+}
+
 void main() {
   var l1 = Livre("Les Misérables", "Victor Hugo");
   var l2 = Livre("L'Étranger", "Albert Camus");
+  var r1 = Roman("Da Vinci Code", "Dan Brown", "Policier");
+  var r2 = Roman("Le Petit Prince", "Saint-Exupéry", "Conte");
 
   l1.afficherInfos();
   l2.afficherInfos();
+  r1.afficherInfosRoman();
+  r2.afficherInfosRoman();
+
   Livre.afficherTotalLivres();
 }
