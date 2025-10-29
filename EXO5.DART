@@ -1,10 +1,11 @@
-class Cercle extends Forme {
-  final double rayon;
+class Rectangle extends Forme {
+  final double longueur;
+  final double largeur;
 
-  Cercle(this.rayon);
+  Rectangle(this.longueur, this.largeur);
 
   @override
   double calculerAire() {
-    return 3.14 * rayon * rayon;
+    return longueur * largeur;
   }
 }
